@@ -1,0 +1,351 @@
+%-------------------------
+% Resume in Latex
+% Author : Abey George
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+
+\documentclass[letterpaper,11pt]{article}
+
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\RequirePackage{fontawesome}
+\usepackage{tikz}
+\usetikzlibrary{svg.path}
+
+
+
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+
+
+
+
+
+%----------FONT OPTIONS----------
+% Calibri-metric-compatible (free, ships with TeX Live).
+% If unavailable, comment this out and uncomment the Helvetica fallback below.
+\usepackage[sfdefault]{carlito}
+% \renewcommand{\familydefault}{\sfdefault} % already handled by [sfdefault]
+
+% Fallback options (uncomment one if Carlito is unavailable):
+% \usepackage{helvet}\renewcommand{\familydefault}{\sfdefault}  % Helvetica
+% \usepackage[default]{sourcesanspro}
+% \usepackage[sfdefault]{FiraSans}
+
+
+
+
+% \pagestyle{fancy}
+% \fancyhf{}  % clear all header and footer fields
+% \fancyfoot{}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
+
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+
+\urlstyle{same}
+
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+
+% Sections formatting (clean corporate look: bold, Title Case, thin rule)
+\titleformat{\section}{
+  \vspace{-4pt}\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\large#3} & \textit{\small #4} \\
+     
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+
+
+\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\begin{document}
+
+
+%----------HEADING----------
+
+
+
+
+\begin{center}
+    {\Huge \bfseries Somasekhar Agoli} \\[5pt]
+    \small
+    \href{tel:+916302364851}{\raisebox{-0.1\height}\faPhone\ \underline{+91-6302364851}} ~
+    \href{mailto:somasekharagolie1@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{somasekharagolie1@gmail.com}} ~
+    \href{https://www.linkedin.com/in/somasekhar-agoli-64064623a/}{\raisebox{-0.2\height}\faLinkedinSquare\ \underline{somasekhar-agoli-64064623a}}  ~
+    \href{https://github.com/Somasekhar9666}{\raisebox{-0.2\height}\faGithub\ \underline{Somasekhar9666}}
+\end{center}
+
+
+\section*{Summary}
+Detail-oriented Automation Engineer with \textbf{2.5 years of experience} in designing and developing \textbf{end-to-end automation frameworks and tools} that significantly reduce manual intervention. Proven track record of \textbf{cutting manual testing and operational effort by up to 90\%} through robust automation solutions. Proficient in \textbf{Python, REST API automation, and scalable automation workflows}, with a strong focus on \textbf{network automation} and infrastructure-driven testing across diverse domains.
+
+\vspace{4pt}
+Strong expertise in \textbf{designing reusable automation modules, building maintainable scripts, executing complex validation scenarios}, and ensuring system reliability. Hands-on experience using \textbf{AI-assisted development tools such as GitHub Copilot, Cursor, and Windsurf} to accelerate code development, improve code quality, and \textbf{optimize problem-solving and design efficiency}.
+
+\vspace{4pt}
+Well-versed in \textbf{Agile/Scrum methodologies}, \textbf{version control using Git}, and \textbf{defect tracking with Jira}. Recognized as a \textbf{collaborative team player} with strong analytical, communication, and problem-solving skills, capable of driving automation initiatives from concept to delivery.
+
+
+
+
+%-----------Experience-----------
+\section{Experience}
+
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Cisco Systems}{Nov 2023 -- Present}
+  {Automation Engineer}{Bangalore, India} 
+
+\textbf{Project 1: High-Availability Validation Framework -- Cisco Secure Firewall Management Center (FMC)}
+\resumeItemListStart
+  \resumeItem{Designed and delivered an end-to-end CI/CD automation framework validating High-Availability deployments of Cisco Secure Firewall Management Center (FMC), covering failover, state synchronization, configuration consistency, and policy replication across active/standby nodes.}
+  \resumeItem{Authored 46+ parameterized HA validation scenarios spanning base, corner, negative, and failure-condition paths, with pre- and post-validation gates to enforce environment integrity before and after each run.}
+  \resumeItem{Optimized pipeline execution through parallelization, fixture reuse, and stage-level efficiencies, reducing end-to-end runtime from ~6 hours to ~5 hours per cycle.}
+  \resumeItem{Hardened pipeline reliability through structured logging, granular checkpoints, and improved observability, materially reducing flaky failures and manual triage overhead.}
+  \resumeItem{Eliminated substantial manual HA validation effort per release, enabling repeatable, hands-off regression coverage across builds.}
+\resumeItemListEnd
+\vspace{14pt}
+
+\textbf{Project 2: Disaster Recovery Automation -- Cloud-Delivered FMC (cdFMC)}
+\resumeItemListStart
+  \resumeItem{Built an end-to-end disaster recovery automation framework for Cloud-Delivered FMC (cdFMC), covering snapshot lifecycle management, full-system recovery, and post-recovery validation.}
+  \resumeItem{Automated snapshot creation, tracking, and rollback to known-good states, along with configuration, policy, and device-registration restoration workflows.}
+  \resumeItem{Implemented post-recovery validation gates including connectivity checks, HA synchronization verification, and event/log consistency across managed devices.}
+  \resumeItem{Orchestrated scheduled and on-demand DR runs through CI/CD, providing repeatable, auditable validation independent of human operators.}
+  \resumeItem{Improved DR validation efficiency by \textasciitilde90\% and reduced manual recovery effort by \textasciitilde80\% through fully automated, hands-free workflows.}
+\resumeItemListEnd
+\vspace{14pt}
+
+\textbf{Project 3: Diagnostic Bundle Generation \& Validation Framework}
+\resumeItemListStart
+  \resumeItem{Developed an automation framework for generating, validating, and verifying diagnostic/troubleshoot bundles across FMC, FTD, and cdFMC platforms.}
+  \resumeItem{Automated artifact generation across multiple platform variants and validated bundle integrity, content completeness, and required-data presence to prevent gaps during support workflows.}
+  \resumeItem{Designed negative-path and reliability checks to confirm graceful behavior under partial failures and degraded conditions.}
+  \resumeItem{Integrated the framework into CI/CD to provide continuous assurance that diagnostic artifacts remain consistent and complete across releases.}
+\resumeItemListEnd
+\vspace{14pt}
+
+\textbf{Project 4: Cross-Platform Migration Validation Framework -- FMC}
+\resumeItemListStart
+  \resumeItem{Built an end-to-end automation framework validating migration of Cisco Secure Firewall Management Center (FMC) across VMware, AWS, GCP, and physical appliance environments.}
+  \resumeItem{Automated migration workflow execution and post-migration verification, including configuration persistence, device-policy integrity, and operational continuity across target platforms.}
+  \resumeItem{Implemented rollback and recovery validation paths to ensure safe failure handling during migration runs.}
+  \resumeItem{Integrated validation into CI/CD so cross-platform migration coverage executes continuously against new builds, catching regressions early.}
+\resumeItemListEnd
+\vspace{14pt}
+
+\textbf{Project 5: Backup \& Restore Automation Framework -- Multi-Platform, Multi-Storage}
+\resumeItemListStart
+  \resumeItem{Designed and delivered a comprehensive backup and restore automation framework spanning on-prem FMC, FTD managed devices, and Cloud-Delivered FMC (cdFMC).}
+  \resumeItem{Automated full backup, scheduled backup, restore, and cross-environment recovery workflows with integrity validation at each stage.}
+  \resumeItem{Built remote-storage integrations across SMB, NFS, SSH/SFTP, and Amazon S3, with end-to-end validation of authentication, transfer, and post-restore consistency.}
+  \resumeItem{Engineered failure-scenario coverage -- interrupted transfers, corrupted artifacts, and unreachable storage backends -- to validate platform resilience and recovery behavior.}
+  \resumeItem{Hardened the framework for scalability and reuse across releases and integrated execution into CI/CD for continuous reliability assurance.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{10pt}
+
+
+
+
+
+
+
+%------RELEVANT COURSEWORK-------
+\section{Core Competencies}
+        \begin{multicols}{4}
+            \begin{itemize}[itemsep=-2pt, parsep=5pt]
+                \item Test Automation
+                \item REST / RPC API Testing
+                \item CI/CD Pipelines
+                \item Network Security
+                \item Linux \& CLI
+                \item Debugging \& RCA
+                \item Observability
+                \item OOP Design
+            \end{itemize}
+        \end{multicols}
+        \vspace*{2.0\multicolsep}
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \item \textbf{Languages:} Python, Java, C, C++, JavaScript, SQL, Shell
+  \item \textbf{Automation \& Frameworks:} Python automation frameworks, pytest, REST/RPC API automation, CLI automation, fixture design, parameterization, regression \& functional testing
+  \item \textbf{CI/CD:} Jenkins pipelines, parallel execution, pre/post-validation gates, structured logging, pipeline optimization
+  \item \textbf{Networking \& Security:} TCP/IP, routing \& switching, firewalls (Cisco FMC / FTD / cdFMC), High-Availability, failover \& recovery, CCNA fundamentals
+  \item \textbf{Cloud \& Infrastructure:} AWS (EC2, S3), GCP, VMware, on-prem / bare-metal appliances
+  \item \textbf{Storage Protocols:} SMB, NFS, SSH/SFTP, Amazon S3
+  \item \textbf{Reliability \& Validation:} Disaster recovery automation, snapshot \& rollback workflows, backup \& restore validation, failure-mode testing, observability
+  \item \textbf{AI / Agentic Systems:} Large Language Models (LLMs), Model Context Protocol (MCP), agentic AI workflows, tool/action orchestration, conversational backends
+  \item \textbf{AI-Assisted Development:} GitHub Copilot, Cursor, Windsurf
+  \item \textbf{Tools:} Git, GitHub, Jira, Postman, Jenkins, Linux, VS Code, PyCharm
+\end{itemize}
+\vspace{-10pt}
+
+
+
+
+
+\section{Hackathon}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {KHOJ -- Agentic Onboarding Assistant \href{https://link-to-proof.com}{\raisebox{-0.1\height}\faExternalLink}}
+    {Apr 2024}
+    {Winner -- Cisco Internal Hackathon \textnormal{(Team Pragya)}}
+    {Bangalore, India}
+    \resumeItemListStart
+      \resumeItem{Designed and built \textbf{KHOJ}, an LLM-powered onboarding assistant providing a single conversational entry point for new hires -- answering organization-specific questions, surfacing learning material, and executing access-request workflows on the user's behalf.}
+      \resumeItem{Built on \textbf{Cisco's internal LLM} with \textbf{Model Context Protocol (MCP)} integration, enabling the assistant to invoke internal services and trigger access workflows directly from the conversation.}
+      \resumeItem{Architected a modular backend that connected the LLM to multiple internal services and action endpoints through MCP, following a multi-source tool-orchestration pattern aligned with modern \textbf{agentic AI} design.}
+      \resumeItem{Served as the \textbf{sole developer} -- owning end-to-end architecture, Cisco-LLM and MCP server integration, and implementation of the conversational and action layers.}
+      \resumeItem{Delivered a complete working prototype within 72 hours and won \textbf{1st place} for engineering depth and impact on onboarding efficiency.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{10pt}
+
+ 
+ %-----------CERTIFICATIONS---------------
+\section{Certifications}
+\begin{multicols}{2}
+\begin{itemize}[leftmargin=0.2cm, itemsep=3pt]
+    \item \href{https://certificateLink.com}{CCNA -- Cisco Certified Network Associate}
+    \item \href{https://certificateLink.com}{Python Programming}
+    \item \href{https://certificateLink.com}{Command Line in Linux -- Coursera}
+    \item \href{https://certificateLink.com}{Microsoft AI Classroom -- Microsoft}
+    \item \href{https://certificateLink.com}{Java Programming}
+    \item \href{https://certificateLink.com}{ReactJS -- Udemy}
+\end{itemize}
+\end{multicols}
+\vspace{10pt}
+
+
+%-----------EDUCATION---------------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Madanapalle Institute of Technology and Sciences}{May 2019 -- May 2023}
+    {Bachelor of Technology in Computer Science (GPA: 7.74 / 10.00)}{Madanapalle, India}
+\resumeSubHeadingListEnd
+
+
+\end{document}
+
+
+
+
