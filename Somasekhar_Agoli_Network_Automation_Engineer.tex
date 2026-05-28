@@ -1,0 +1,315 @@
+%-------------------------
+% Resume in Latex
+% Author : Abey George
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+
+\documentclass[letterpaper,11pt]{article}
+
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\RequirePackage{fontawesome}
+\usepackage{tikz}
+\usetikzlibrary{svg.path}
+
+
+
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{cvblue}
+\colorlet{tagline}{cvblue}
+\colorlet{heading}{cvblue}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+
+
+
+
+
+%----------FONT OPTIONS----------
+% Calibri-metric-compatible (free, ships with TeX Live).
+% If unavailable, comment this out and uncomment the Helvetica fallback below.
+\usepackage[sfdefault]{carlito}
+% \renewcommand{\familydefault}{\sfdefault} % already handled by [sfdefault]
+
+% Fallback options (uncomment one if Carlito is unavailable):
+% \usepackage{helvet}\renewcommand{\familydefault}{\sfdefault}  % Helvetica
+% \usepackage[default]{sourcesanspro}
+% \usepackage[sfdefault]{FiraSans}
+
+
+
+
+% \pagestyle{fancy}
+% \fancyhf{}  % clear all header and footer fields
+% \fancyfoot{}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
+
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+
+\urlstyle{same}
+
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+
+% Sections formatting (clean corporate look: bold, Title Case, thin rule)
+\titleformat{\section}{
+  \vspace{-4pt}\raggedright\large\color{heading}\bfseries
+}{}{0em}{}[\color{headingrule}\titlerule \vspace{-5pt}]
+
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\large#3} & \textit{\small #4} \\
+     
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+
+
+\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\begin{document}
+
+
+%----------HEADING----------
+
+
+
+
+\begin{center}
+    {\Huge \bfseries \color{name} Somasekhar Agoli} \\[3pt]
+    {\large \color{tagline} Network Automation Engineer} \\[5pt]
+    \small
+    \raisebox{-0.1\height}\faMapMarker\ Bangalore, KA, India ~
+    \href{tel:+916302364851}{\raisebox{-0.1\height}\faPhone\ \underline{+91-6302364851}} ~
+    \href{mailto:somasekharagolie1@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{somasekharagolie1@gmail.com}} ~
+    \href{https://www.linkedin.com/in/somasekhar-agoli/}{\raisebox{-0.2\height}\faLinkedinSquare\ \underline{linkedin.com/in/somasekhar-agoli}}
+\end{center}
+
+
+\section{Summary}
+\textbf{CCNA-certified Network Automation Engineer} with \textbf{2.5+ years of hands-on experience at Cisco} engineering \textbf{Python}-based automation for \textbf{Cisco Secure Firewall infrastructure} (FMC, FTD, cdFMC). Hands-on across \textbf{HA failover validation, disaster recovery, backup/restore, diagnostic generation, and cross-platform migration} using \textbf{pyATS} and \textbf{REST/CLI device automation}, integrated into \textbf{CI/CD} pipelines that have cut manual validation and recovery effort by up to \textbf{90\%}. Authored \textbf{a large portfolio of automated test scenarios} across on-prem, virtual, and cloud-hosted network security environments. Combines \textbf{networking foundations (CCNA: TCP/IP, Routing \& Switching, SSL/TLS, NAT)} with strong \textbf{automation engineering} to harden release quality of production firewall management platforms. Leverages \textbf{AI-assisted development workflows} (GitHub Copilot, Cursor, Windsurf) to accelerate delivery and debugging.
+
+%-----------CORE COMPETENCIES-----------
+\section{Core Competencies}
+\small
+Cisco Secure Firewall (FMC / FTD / cdFMC)~$\bullet$~Network Automation \& CI/CD Validation~$\bullet$~Python / pyATS Test Framework Engineering~$\bullet$~HA Failover \& Disaster Recovery Automation~$\bullet$~Backup, Restore \& Migration Validation~$\bullet$~REST API \& CLI Device Orchestration~$\bullet$~Networking Foundations (CCNA: TCP/IP, Routing \& Switching, SSL/TLS, NAT)~$\bullet$~Cloud \& Multi-Platform Infrastructure (AWS / GCP / VMware)
+\vspace{4pt}
+
+
+
+
+%-----------Experience-----------
+\section{Experience}
+
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Cisco Systems}{Nov 2023 -- Present}
+  {Network Automation Engineer}{Bangalore, KA, India} 
+
+\textbf{Project 1: High-Availability Validation Framework -- Cisco Secure Firewall Management Center (FMC)}
+\nopagebreak
+\resumeItemListStart
+  \resumeItem{Engineered a \textbf{pyATS}-based HA validation framework automating a wide range of HA scenarios across multiple workflow categories -- including HA formation, role-switch failover, HA break, sync/mirror control, failure recovery, and negative / degraded-condition paths.}
+  \resumeItem{Built a reusable \textbf{HA orchestration library} providing high-level primitives for HA formation, role-switch, HA break, sync pause/resume, polling, FTD HA-pair lifecycle, and cluster validation -- used as a foundation across the broader HA testcase suite.}
+  \resumeItem{Integrated \textbf{CLI and REST API} probes for device state monitoring, registration verification, and managed-device reachability across the \textbf{active/standby network topology} to ensure traffic continuity and policy enforcement after failover events.}
+  \resumeItem{Reduced CI/CD pipeline runtime from $\sim$6h to $\sim$5h per cycle through parallelized execution and fixture reuse, accelerating FMC HA release-readiness signal.}
+\resumeItemListEnd
+\vspace{14pt}
+
+\textbf{Project 2: Disaster Recovery Automation -- Cloud-Delivered FMC (cdFMC)}
+\nopagebreak
+\resumeItemListStart
+  \resumeItem{Engineered a \textbf{pre/post state-capture-and-replay DR framework} for cdFMC deployments -- automating snapshot lifecycle, recovery orchestration, and post-DR re-validation across distributed cloud-hosted firewall management infrastructure.}
+  \resumeItem{Captured and re-validated a broad set of cdFMC \textbf{configuration and policy domains} (versioning, registered devices, device health, multiple policy types, and deployment history) to confirm full policy parity and managed-device continuity after recovery.}
+  \resumeItem{Owned the \textbf{disaster-recovery automation suite} within the cdFMC release CI/CD process, producing repeatable, auditable recovery evidence per release train.}
+  \resumeItem{Improved DR validation efficiency by $\sim$\textbf{90\%} and reduced manual recovery effort by $\sim$\textbf{80\%} through CI/CD-integrated, repeatable recovery testing.}
+\resumeItemListEnd
+\vspace{14pt}
+
+\textbf{Project 3: Backup \& Restore Automation Framework -- Multi-Platform, Multi-Storage}
+\nopagebreak
+\resumeItemListStart
+  \resumeItem{Designed a \textbf{pyATS automation framework} covering backup and restore workflows across on-prem \textbf{FMC}, \textbf{cdFMC}, and \textbf{FTD-managed network security devices} -- spanning multiple operational modes including standalone, HA, cluster, cross-device, and hardware-replacement recovery.}
+  \resumeItem{Integrated \textbf{multiple storage backends} (Local, \textbf{NFS}, \textbf{SFTP/SCP}, \textbf{Amazon S3}) with end-to-end auth, transfer validation, manifest-driven integrity checks, and post-restore device reachability and policy-consistency verification.}
+  \resumeItem{Delivered a dedicated \textbf{S3 backup/restore subsystem} enabling first-class cloud-storage support for on-prem firewall backups.}
+  \resumeItem{Built extensive \textbf{REST API test coverage} and scheduling-automation modules covering on-demand and cron-driven backup jobs across managed-device topologies.}
+  \resumeItem{Compressed what was multi-day manual backup/restore validation into unattended CI runs, materially reducing release-cycle effort across the firewall management stack.}
+\resumeItemListEnd
+\vspace{14pt}
+
+\filbreak
+\textbf{Project 4: Diagnostic / Troubleshoot Bundle Automation -- FMC / FTD / cdFMC}
+\nopagebreak
+\resumeItemListStart
+  \resumeItem{Built a \textbf{pyATS automation framework} for diagnostic bundle generation and validation across \textbf{multiple platform variants} -- including standalone, HA, clustered, and management-tier topologies -- supporting both \textbf{API and CLI} extraction paths.}
+  \resumeItem{Validated bundle completeness across a broad set of device and traffic-plane component domains to ensure diagnostic artifacts contain the data required for production network troubleshooting.}
+  \resumeItem{Authored shared utility libraries reusable across on-prem and cdFMC variants, standardizing diagnostic collection for support and network operations workflows.}
+  \resumeItem{Engineered negative-path and degraded-condition scenarios to confirm graceful failure handling; integrated into \textbf{CI/CD} for continuous assurance of diagnostic-artifact consistency across release trains.}
+\resumeItemListEnd
+\vspace{14pt}
+
+\filbreak
+\textbf{Project 5: Cross-Platform Migration Validation Framework -- FMC}
+\nopagebreak
+\resumeItemListStart
+  \resumeItem{Architected a \textbf{pyATS automation framework} validating end-to-end \textbf{FMC migration workflows} for \textbf{production firewall management appliances} across multiple topology modes (standalone, HA, dual-instance) and a range of source$\rightarrow$target hardware paths spanning VMware, AWS, GCP, and physical appliances.}
+  \resumeItem{Automated the \textbf{full migration lifecycle} -- source preparation, migration bundle creation and upload, compatibility checks, migration execution, and post-migration validation of configuration persistence, licensing state, and HA re-formation.}
+  \resumeItem{Engineered extensive \textbf{negative-path and post-migration scenarios} stress-testing HA splits, version mismatches, in-flight critical operations, and rollback paths to guarantee safe failure handling.}
+  \resumeItem{Built reusable base test classes that became a widely reused migration validation base layer, providing release-gate regression coverage across cross-platform upgrades.}
+\resumeItemListEnd
+
+\vspace{8pt}
+\textbf{Side Initiative: KHOJ -- Agentic Onboarding Assistant} \href{https://github.com/Somasekhar9666/resume/blob/main/khoj-hackathon-winner.jpeg}{\small \faTrophy} \hfill \textit{\small Cisco Internal Hackathon Winner, Apr 2024}
+\nopagebreak
+\resumeItemListStart
+  \resumeItem{Won \textbf{1st place} at Cisco Internal Hackathon (2024); built \textbf{KHOJ}, an LLM-powered \textbf{Webex bot} for employee onboarding, integrating an \textbf{enterprise LLM} with \textbf{MCP}-based service orchestration to automate access requests, org-specific Q\&A, and learning-resource discovery.}
+  \resumeItem{Delivered end-to-end as \textbf{sole developer in 72 hours} -- LLM integration, MCP server, and Webex bot deployment.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{2pt}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \item \textbf{Programming:} Python (primary), Java, SQL, Shell Scripting
+  \item \textbf{Automation:} pyATS, pytest, REST/RPC API Automation, CLI Automation, Test Framework Design
+  \item \textbf{CI/CD:} Jenkins, Pipeline Automation, Parallel Execution, Logging \& Monitoring
+  \item \textbf{Networking \& Security:} TCP/IP, DNS, HTTP/S, SSL/TLS, Routing \& Switching, Cisco FTD (firewall), FMC \& cdFMC, High Availability, CCNA
+  \item \textbf{Cloud \& Infrastructure:} AWS (EC2, S3), GCP, VMware, on-prem / bare-metal appliances
+  \item \textbf{Storage Protocols:} SMB, NFS, SSH/SFTP, Amazon S3
+  \item \textbf{Concepts:} Network Troubleshooting, Linux Networking, Disaster Recovery, Backup \& Restore, HA Failover, Failure Testing, Observability, Runbooks
+  \item \textbf{AI Tools:} GitHub Copilot, Cursor, Windsurf
+  \item \textbf{Tools:} Git, Jira, Postman, Linux, VS Code, PyCharm
+\end{itemize}
+\vspace{4pt}
+
+%-----------CERTIFICATIONS---------------
+\section{Certifications}
+\begin{itemize}[leftmargin=0.2cm, itemsep=1pt]
+    \item \textbf{CCNA -- Cisco Certified Network Associate} (Routing \& Switching, TCP/IP, Network Fundamentals)
+    \item Python Programming -- Simplilearn
+    \item Command Line in Linux -- Coursera
+    \item Microsoft AI Classroom -- Microsoft
+    \item Java Programming -- Simplilearn
+\end{itemize}
+\vspace{6pt}
+
+%-----------EDUCATION---------------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Madanapalle Institute of Technology \& Science}{May 2019 -- May 2023}
+    {Bachelor of Technology in Computer Science (GPA: 7.74 / 10.00)}{Madanapalle, India}
+\resumeSubHeadingListEnd
+
+
+\end{document}
+
+
+
+
