@@ -22,6 +22,7 @@
 \usepackage{fontawesome5}
 \usepackage{multicol}
 \usepackage{graphicx}
+\usepackage{needspace}
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
@@ -58,23 +59,12 @@
 
 %----------FONT OPTIONS----------
 % Calibri-metric-compatible (free, ships with TeX Live).
-% If unavailable, comment this out and uncomment the Helvetica fallback below.
 \usepackage[sfdefault]{carlito}
-% \renewcommand{\familydefault}{\sfdefault} % already handled by [sfdefault]
 
 % Fallback options (uncomment one if Carlito is unavailable):
-% \usepackage{helvet}\renewcommand{\familydefault}{\sfdefault}  % Helvetica
+% \usepackage{helvet}\renewcommand{\familydefault}{\sfdefault}
 % \usepackage[default]{sourcesanspro}
 % \usepackage[sfdefault]{FiraSans}
-
-
-
-
-% \pagestyle{fancy}
-% \fancyhf{}  % clear all header and footer fields
-% \fancyfoot{}
-% \renewcommand{\headrulewidth}{0pt}
-% \renewcommand{\footrulewidth}{0pt}
 
 
 % Adjust margins
@@ -156,7 +146,7 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[topsep=2pt, partopsep=0pt, parsep=0pt, itemsep=1pt, leftmargin=0.15in]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 
@@ -191,12 +181,12 @@
 
 
 \section{Summary}
-\textbf{CCNA-certified Network Automation Engineer} with \textbf{2.5+ years of hands-on experience at Cisco} engineering \textbf{Python}-based automation for \textbf{Cisco Secure Firewall infrastructure} (FMC, FTD, cdFMC). Hands-on across \textbf{HA failover validation, disaster recovery, backup/restore, troubleshoot bundle generation \& validation, and cross-platform migration} using \textbf{pyATS} and \textbf{REST/CLI device automation}, integrated into \textbf{CI/CD} pipelines that have cut manual validation and recovery effort by up to \textbf{90\%}. Authored \textbf{a large portfolio of automated test scenarios} across on-prem, virtual, and cloud-hosted network security environments. Combines \textbf{networking foundations (CCNA: TCP/IP, Routing \& Switching, SSL/TLS, NAT)} with strong \textbf{automation engineering} to harden release quality of production firewall management platforms. Leverages \textbf{AI-assisted development workflows} (GitHub Copilot, Cursor, Windsurf) to accelerate delivery and debugging.
+\textbf{Network Automation Engineer} with \textbf{2.5+ years at Cisco} engineering \textbf{Python / pyATS} automation for production \textbf{Cisco Secure Firewall infrastructure} (FMC, FTD, cdFMC). Specialized in \textbf{HA failover, disaster recovery, backup/restore, and cross-platform migration} of network security platforms, with deep \textbf{data-plane validation} via traffic generation, event correlation, and backend rule inspection across inline, switched, and routed interface modes (IPv4/IPv6). Authored \textbf{500+ automated test cases} integrated into release \textbf{CI/CD} pipelines that have cut manual validation and recovery effort by up to \textbf{90\%}, pairing hands-on Cisco firewall validation with strong \textbf{networking foundations} (TCP/IP, Routing \& Switching, NAT, ACLs, SSL/TLS).
 
 %-----------CORE COMPETENCIES-----------
 \section{Core Competencies}
 \small
-Cisco Secure Firewall (FMC / FTD / cdFMC)~$\bullet$~Network Automation \& CI/CD Validation~$\bullet$~Python / pyATS Test Framework Engineering~$\bullet$~HA Failover \& Disaster Recovery Automation~$\bullet$~Backup, Restore \& Migration Validation~$\bullet$~REST API \& CLI Device Orchestration~$\bullet$~Networking Foundations (CCNA: TCP/IP, Routing \& Switching, SSL/TLS, NAT)~$\bullet$~Cloud \& Multi-Platform Infrastructure (AWS / GCP / VMware)
+Cisco Secure Firewall Automation \& Validation (FMC / FTD / cdFMC)~$\bullet$~Networking Foundations~$\bullet$~HA Failover \& Service-Continuity Validation~$\bullet$~Data-Plane Traffic Generation \& Event Validation (IPv4/IPv6)~$\bullet$~Disaster Recovery \& Backup/Restore Automation~$\bullet$~Firewall Migration \& Multi-Mode Interface Validation (Inline / Switched / Routed)~$\bullet$~Python / pyATS Test Framework Engineering~$\bullet$~REST API \& CLI Device Orchestration~$\bullet$~CI/CD Release-Gate Integration (Jenkins)
 \vspace{4pt}
 
 
@@ -211,64 +201,57 @@ Cisco Secure Firewall (FMC / FTD / cdFMC)~$\bullet$~Network Automation \& CI/CD 
   {Cisco Systems}{Nov 2023 -- Present}
   {Network Automation Engineer}{Bangalore, KA, India} 
 
-\textbf{Project 1: High-Availability Validation Framework -- Cisco Secure Firewall Management Center (FMC)}
+\needspace{8\baselineskip}
+\textbf{Project 1: FMC Migration \& Data-Plane Stress Validation -- Multi-Mode Firewall Topologies}
 \nopagebreak
 \resumeItemListStart
-  \resumeItem{Engineered a \textbf{pyATS}-based HA validation framework automating a wide range of HA scenarios across multiple workflow categories -- including HA formation, role-switch failover, HA break, sync/mirror control, failure recovery, and negative / degraded-condition paths.}
-  \resumeItem{Built a reusable \textbf{HA orchestration library} providing high-level primitives for HA formation, role-switch, HA break, sync pause/resume, polling, FTD HA-pair lifecycle, and cluster validation -- used as a foundation across the broader HA testcase suite.}
-  \resumeItem{Integrated \textbf{CLI and REST API} probes for device state monitoring, registration verification, and managed-device reachability across the \textbf{active/standby network topology} to ensure traffic continuity and policy enforcement after failover events.}
-  \resumeItem{Reduced CI/CD pipeline runtime from $\sim$6h to $\sim$5h per cycle through parallelized execution and fixture reuse, accelerating FMC HA release-readiness signal.}
+  \resumeItem{Designed and built a \textbf{pyATS migration validation framework} automating the full lifecycle -- source preparation, bundle upload, migration execution, and post-migration validation of configuration persistence, licensing state, and HA re-formation -- across \textbf{standalone, HA, and dual-instance} topologies spanning \textbf{VMware, AWS, GCP, and physical firewall appliances}.}
+  \resumeItem{Built a \textbf{pre-migration heavy-load test harness} -- \textbf{49 test cases} that provision heavy \textbf{Access Control, Prefilter, NAT, SSL/TLS, Security Intelligence, and Network Discovery} policies plus \textbf{Inline Sets, Bridge Groups, Routed Interfaces, Static Routes, and Security Zones} -- to stress the FTD before migration.}
+  \resumeItem{Automated \textbf{end-to-end data-plane traffic generation} through deployed FTD policies and validated the resulting \textbf{connection, prefilter, SSL/TLS, network-discovery, and Security Intelligence events} across \textbf{Inline, Switched, and Routed} interface modes for both \textbf{IPv4 and IPv6} -- 60+ post-migration validation test cases.}
+  \resumeItem{Verified \textbf{NAT and Access Control backend} processing post-migration by inspecting rule compilation, installation state, address translation tables, and hit counts on FTD; closed the loop with \textbf{FSIC} (Firepower System Integration Check) and health-alert validation.}
+  \resumeItem{Built reusable \textbf{base test classes} shared across the migration suites -- 30+ test cases, 90+ test methods -- and engineered negative-path scenarios stress-testing HA splits, version mismatches, in-flight critical operations, and rollback paths for production firewall appliances.}
 \resumeItemListEnd
-\vspace{14pt}
+\vspace{8pt}
 
-\textbf{Project 2: Disaster Recovery Automation -- Cloud-Delivered FMC (cdFMC)}
+\needspace{6\baselineskip}
+\textbf{Project 2: HA Failover \& Service-Continuity Validation -- Cisco Secure Firewall Management Center (FMC)}
 \nopagebreak
 \resumeItemListStart
-  \resumeItem{Engineered a \textbf{pre/post state-capture-and-replay DR framework} for cdFMC deployments -- automating snapshot lifecycle, recovery orchestration, and post-DR re-validation across distributed cloud-hosted firewall management infrastructure.}
-  \resumeItem{Captured and re-validated a broad set of cdFMC \textbf{configuration and policy domains} (versioning, registered devices, device health, multiple policy types, and deployment history) to confirm full policy parity and managed-device continuity after recovery.}
-  \resumeItem{Owned the \textbf{disaster-recovery automation suite} within the cdFMC release CI/CD process, producing repeatable, auditable recovery evidence per release train.}
-  \resumeItem{Improved DR validation efficiency by $\sim$\textbf{90\%} and reduced manual recovery effort by $\sim$\textbf{80\%} through CI/CD-integrated, repeatable recovery testing.}
+  \resumeItem{Engineered a \textbf{pyATS} validation framework for FMC \textbf{High Availability} covering \textbf{35+ scenarios and 80+ test methods} -- HA formation, role-switch failover, HA break, sync/mirror control, failure recovery, and negative / degraded-condition paths -- to validate \textbf{network service continuity} after failover events.}
+  \resumeItem{Built a reusable \textbf{HA orchestration library} exposing high-level primitives (formation, role-switch, break, sync pause/resume, polling, FTD HA-pair lifecycle) consumed by the broader HA testcase suite.}
+  \resumeItem{Layered \textbf{CLI and REST API} probes for device state monitoring, registration verification, and \textbf{managed-device reachability validation} across the \textbf{active/standby network topology} -- confirming policy enforcement and control/management-plane continuity post-failover.}
+  \vspace{-4pt}
+  \resumeItem{Parallelized execution and refactored fixtures, reducing CI/CD HA-suite runtime from $\sim$6h to $\sim$5h per release cycle.}
 \resumeItemListEnd
-\vspace{14pt}
+\vspace{8pt}
 
-\textbf{Project 3: Backup \& Restore Automation Framework -- Multi-Platform, Multi-Storage}
+\needspace{6\baselineskip}
+\textbf{Project 3: Disaster Recovery Automation -- Cloud-Hosted Network Security Management (cdFMC)}
 \nopagebreak
 \resumeItemListStart
-  \resumeItem{Designed a \textbf{pyATS automation framework} covering backup and restore workflows across on-prem \textbf{FMC}, \textbf{cdFMC}, and \textbf{FTD-managed network security devices} -- spanning multiple operational modes including standalone, HA, cluster, cross-device, and hardware-replacement recovery.}
-  \resumeItem{Integrated \textbf{multiple storage backends} (Local, \textbf{NFS}, \textbf{SFTP/SCP}, \textbf{Amazon S3}) with end-to-end auth, transfer validation, manifest-driven integrity checks, and post-restore device reachability and policy-consistency verification.}
-  \resumeItem{Delivered a dedicated \textbf{S3 backup/restore subsystem} enabling first-class cloud-storage support for on-prem firewall backups.}
-  \resumeItem{Built extensive \textbf{REST API test coverage} and scheduling-automation modules covering on-demand and cron-driven backup jobs across managed-device topologies.}
-  \resumeItem{Compressed what was multi-day manual backup/restore validation into unattended CI runs, materially reducing release-cycle effort across the firewall management stack.}
+  \resumeItem{Built a \textbf{pre/post state-capture-and-replay DR framework} for cdFMC, automating snapshot lifecycle, recovery orchestration, and post-DR re-validation across distributed cloud-hosted infrastructure.}
+  \resumeItem{Authored \textbf{160+ test methods} across four DR scripts -- pre-DR preparation, pre-DR snapshot capture, post-DR validation, and post-DR snapshot re-validation -- covering the full snapshot \& recovery lifecycle.}
+  \resumeItem{Re-validated \textbf{14+ configuration and policy domains} -- SRU/LSP versions, registered components, device health, AC / file / identity / SSL-TLS / VPN policies, and deployment history -- to confirm full policy parity and \textbf{device continuity} after recovery.}
+  \resumeItem{Operationalized the DR suite inside the cdFMC release \textbf{CI/CD} pipeline, cutting DR validation effort by $\sim$\textbf{90\%} and manual recovery effort by $\sim$\textbf{80\%} per release.}
 \resumeItemListEnd
-\vspace{14pt}
+\vspace{8pt}
 
-\filbreak
-\textbf{Project 4: Troubleshoot Bundle Automation -- FMC / FTD / cdFMC}
+\needspace{7\baselineskip}
+\textbf{Project 4: Backup \& Restore Automation -- Multi-Platform Firewall Devices}
 \nopagebreak
 \resumeItemListStart
-  \resumeItem{Built a \textbf{pyATS automation framework} that triggers \textbf{troubleshoot bundle generation} on the device (via \textbf{REST API} or \textbf{CLI}), retrieves the resulting bundle, and validates its completeness end-to-end across \textbf{multiple platform variants} -- including standalone, HA, clustered, and management-tier topologies.}
-  \resumeItem{Validated that every expected \textbf{log, configuration, state dump, and runtime metric} required for production network troubleshooting is present in the downloaded bundle, across a broad set of device and traffic-plane component domains.}
-  \resumeItem{Authored shared utility libraries reusable across on-prem and cdFMC variants, standardizing bundle trigger, download, and verification flows for support and network operations workflows.}
-  \resumeItem{Engineered negative-path and degraded-condition scenarios to confirm graceful failure handling when bundle generation is interrupted or incomplete; integrated into \textbf{CI/CD} for continuous assurance of troubleshoot-artifact consistency across release trains.}
-\resumeItemListEnd
-\vspace{14pt}
-
-\filbreak
-\textbf{Project 5: Cross-Platform Migration Validation Framework -- FMC}
-\nopagebreak
-\resumeItemListStart
-  \resumeItem{Architected a \textbf{pyATS automation framework} validating end-to-end \textbf{FMC migration workflows} for \textbf{production firewall management appliances} across multiple topology modes (standalone, HA, dual-instance) and a range of source-to-target hardware paths spanning VMware, AWS, GCP, and physical appliances.}
-  \resumeItem{Automated the \textbf{full migration lifecycle} -- source preparation, migration bundle creation and upload, compatibility checks, migration execution, and post-migration validation of configuration persistence, licensing state, and HA re-formation.}
-  \resumeItem{Engineered extensive \textbf{negative-path and post-migration scenarios} stress-testing HA splits, version mismatches, in-flight critical operations, and rollback paths to guarantee safe failure handling.}
-  \resumeItem{Built reusable base test classes that became a widely reused migration validation base layer, providing release-gate regression coverage across cross-platform upgrades.}
+  \resumeItem{Designed a \textbf{pyATS automation framework} spanning \textbf{100+ backup/restore scenarios and 270+ test methods} across on-prem \textbf{FMC}, \textbf{cdFMC}, and \textbf{FTD} devices.}
+  \resumeItem{Covered \textbf{four recovery modes} -- standalone, HA, cross-device, and hardware-replacement -- with end-to-end validation of backup integrity, post-restore device reachability, and policy consistency.}
+  \resumeItem{Integrated \textbf{multiple storage backends}: Local, \textbf{NFS}, \textbf{SFTP/SCP}, and \textbf{Amazon S3} -- with authentication, transfer validation, and manifest-driven integrity checks.}
+  \resumeItem{Built \textbf{REST API test coverage} for on-demand backup operations and the \textbf{Amazon S3 backup/restore} flow across multi-component topologies.}
+  \resumeItem{Authored scheduling-automation modules validating cron-driven backup jobs, compressing multi-day manual validation cycles into unattended CI runs.}
 \resumeItemListEnd
 
 \vspace{8pt}
-\textbf{Side Initiative: KHOJ -- Agentic Onboarding Assistant} \href{https://github.com/Somasekhar9666/resume/blob/main/khoj-hackathon-winner.jpeg}{\small \faTrophy} \hfill \textit{\small Cisco Internal Hackathon Winner, Apr 2024}
+\textbf{Recognition: Cisco Internal Hackathon Winner -- KHOJ} \href{https://github.com/Somasekhar9666/resume/blob/main/khoj-hackathon-winner.jpeg}{\small \faTrophy} \hfill \textit{\small Apr 2024}
 \nopagebreak
 \resumeItemListStart
-  \resumeItem{Won \textbf{1st place} at Cisco Internal Hackathon (2024); built \textbf{KHOJ}, an LLM-powered \textbf{Webex bot} for employee onboarding, integrating an \textbf{enterprise LLM} with \textbf{MCP}-based service orchestration to automate access requests, org-specific Q\&A, and learning-resource discovery.}
-  \resumeItem{Delivered end-to-end as \textbf{sole developer in 72 hours} -- LLM integration, MCP server, and Webex bot deployment.}
+  \resumeItem{Won \textbf{1st place} as \textbf{sole developer in 72 hours}; built KHOJ, integrating an \textbf{enterprise LLM} with \textbf{MCP-based service orchestration} and a Webex chat front-end.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 \vspace{2pt}
@@ -276,15 +259,18 @@ Cisco Secure Firewall (FMC / FTD / cdFMC)~$\bullet$~Network Automation \& CI/CD 
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
-  \item \textbf{Programming:} Python (primary), Java, SQL, Shell Scripting
-  \item \textbf{Automation:} pyATS, pytest, REST/RPC API Automation, CLI Automation, Test Framework Design
-  \item \textbf{CI/CD:} Jenkins, Pipeline Automation, Parallel Execution, Logging \& Monitoring
-  \item \textbf{Networking \& Security:} TCP/IP, DNS, HTTP/S, SSL/TLS, Routing \& Switching, Cisco FTD (firewall), FMC \& cdFMC, High Availability, CCNA
-  \item \textbf{Cloud \& Infrastructure:} AWS (EC2, S3), GCP, VMware, on-prem / bare-metal appliances
-  \item \textbf{Storage Protocols:} SMB, NFS, SSH/SFTP, Amazon S3
-  \item \textbf{Concepts:} Network Troubleshooting, Linux Networking, Disaster Recovery, Backup \& Restore, HA Failover, Failure Testing, Observability, Runbooks
-  \item \textbf{AI Tools:} GitHub Copilot, Cursor, Windsurf
-  \item \textbf{Tools:} Git, Jira, Postman, Linux, VS Code, PyCharm
+  \item \textbf{Networking:} TCP/IP, Routing \& Switching fundamentals, NAT, ACLs, Subnetting, VLANs, DNS, DHCP, SSL/TLS, IPv4/IPv6
+  \item \textbf{Cisco Security Platforms:} Cisco Secure Firewall (FTD), Firewall Management Center (FMC), Cloud-Hosted FMC (cdFMC), High Availability, Snort3
+  \item \textbf{FTD Policy Domains:} Access Control, Prefilter, NAT, SSL/TLS, Security Intelligence, Network Discovery
+  \item \textbf{Firewall Topologies:} Inline Sets, Bridge Groups, Routed Interfaces, Static Routes, Security Zones, Port Mode interfaces
+  \item \textbf{Network Automation:} pyATS, pytest, REST/JSON API automation, CLI device automation, polling \& retry patterns, fixture design, YAML testbeds
+  \item \textbf{Traffic \& Event Validation:} Data-plane traffic generation, event-stream validation (connection / prefilter / SSL-TLS / discovery / SI; IPv4-IPv6), NAT \& AC backend rule inspection, FSIC, health monitoring
+  \item \textbf{Languages:} Python (primary), Shell / Bash Scripting, SQL
+  \item \textbf{CI/CD:} Jenkins, pipeline-as-code, parallel execution, release gating, artifact management, structured logging
+  \item \textbf{Cloud \& Infrastructure:} AWS (EC2, S3), GCP, VMware ESXi, Linux, on-prem / bare-metal appliances
+  \item \textbf{Protocols \& Storage:} HTTPS, REST over HTTPS, SSH, SFTP / SCP, TCP/IP; Amazon S3, NFS
+  \item \textbf{AI Tools:} GitHub Copilot, Cursor, Windsurf, MCP, LLM integration
+  \item \textbf{Tools:} Git, Jira, Postman, VS Code
 \end{itemize}
 \vspace{4pt}
 
@@ -294,8 +280,6 @@ Cisco Secure Firewall (FMC / FTD / cdFMC)~$\bullet$~Network Automation \& CI/CD 
     \item \textbf{CCNA -- Cisco Certified Network Associate} (Routing \& Switching, TCP/IP, Network Fundamentals)
     \item Python Programming -- Simplilearn
     \item Command Line in Linux -- Coursera
-    \item Microsoft AI Classroom -- Microsoft
-    \item Java Programming -- Simplilearn
 \end{itemize}
 \vspace{6pt}
 
