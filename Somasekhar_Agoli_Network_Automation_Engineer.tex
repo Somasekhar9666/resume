@@ -191,7 +191,7 @@
 
 
 \section{Summary}
-\textbf{CCNA-certified Network Automation Engineer} with \textbf{2.5+ years of hands-on experience at Cisco} engineering \textbf{Python}-based automation for \textbf{Cisco Secure Firewall infrastructure} (FMC, FTD, cdFMC). Hands-on across \textbf{HA failover validation, disaster recovery, backup/restore, diagnostic generation, and cross-platform migration} using \textbf{pyATS} and \textbf{REST/CLI device automation}, integrated into \textbf{CI/CD} pipelines that have cut manual validation and recovery effort by up to \textbf{90\%}. Authored \textbf{a large portfolio of automated test scenarios} across on-prem, virtual, and cloud-hosted network security environments. Combines \textbf{networking foundations (CCNA: TCP/IP, Routing \& Switching, SSL/TLS, NAT)} with strong \textbf{automation engineering} to harden release quality of production firewall management platforms. Leverages \textbf{AI-assisted development workflows} (GitHub Copilot, Cursor, Windsurf) to accelerate delivery and debugging.
+\textbf{CCNA-certified Network Automation Engineer} with \textbf{2.5+ years of hands-on experience at Cisco} engineering \textbf{Python}-based automation for \textbf{Cisco Secure Firewall infrastructure} (FMC, FTD, cdFMC). Hands-on across \textbf{HA failover validation, disaster recovery, backup/restore, troubleshoot bundle generation \& validation, and cross-platform migration} using \textbf{pyATS} and \textbf{REST/CLI device automation}, integrated into \textbf{CI/CD} pipelines that have cut manual validation and recovery effort by up to \textbf{90\%}. Authored \textbf{a large portfolio of automated test scenarios} across on-prem, virtual, and cloud-hosted network security environments. Combines \textbf{networking foundations (CCNA: TCP/IP, Routing \& Switching, SSL/TLS, NAT)} with strong \textbf{automation engineering} to harden release quality of production firewall management platforms. Leverages \textbf{AI-assisted development workflows} (GitHub Copilot, Cursor, Windsurf) to accelerate delivery and debugging.
 
 %-----------CORE COMPETENCIES-----------
 \section{Core Competencies}
@@ -243,13 +243,13 @@ Cisco Secure Firewall (FMC / FTD / cdFMC)~$\bullet$~Network Automation \& CI/CD 
 \vspace{14pt}
 
 \filbreak
-\textbf{Project 4: Diagnostic / Troubleshoot Bundle Automation -- FMC / FTD / cdFMC}
+\textbf{Project 4: Troubleshoot Bundle Automation -- FMC / FTD / cdFMC}
 \nopagebreak
 \resumeItemListStart
-  \resumeItem{Built a \textbf{pyATS automation framework} for diagnostic bundle generation and validation across \textbf{multiple platform variants} -- including standalone, HA, clustered, and management-tier topologies -- supporting both \textbf{API and CLI} extraction paths.}
-  \resumeItem{Validated bundle completeness across a broad set of device and traffic-plane component domains to ensure diagnostic artifacts contain the data required for production network troubleshooting.}
-  \resumeItem{Authored shared utility libraries reusable across on-prem and cdFMC variants, standardizing diagnostic collection for support and network operations workflows.}
-  \resumeItem{Engineered negative-path and degraded-condition scenarios to confirm graceful failure handling; integrated into \textbf{CI/CD} for continuous assurance of diagnostic-artifact consistency across release trains.}
+  \resumeItem{Built a \textbf{pyATS automation framework} that triggers \textbf{troubleshoot bundle generation} on the device (via \textbf{REST API} or \textbf{CLI}), retrieves the resulting bundle, and validates its completeness end-to-end across \textbf{multiple platform variants} -- including standalone, HA, clustered, and management-tier topologies.}
+  \resumeItem{Validated that every expected \textbf{log, configuration, state dump, and runtime metric} required for production network troubleshooting is present in the downloaded bundle, across a broad set of device and traffic-plane component domains.}
+  \resumeItem{Authored shared utility libraries reusable across on-prem and cdFMC variants, standardizing bundle trigger, download, and verification flows for support and network operations workflows.}
+  \resumeItem{Engineered negative-path and degraded-condition scenarios to confirm graceful failure handling when bundle generation is interrupted or incomplete; integrated into \textbf{CI/CD} for continuous assurance of troubleshoot-artifact consistency across release trains.}
 \resumeItemListEnd
 \vspace{14pt}
 
@@ -257,7 +257,7 @@ Cisco Secure Firewall (FMC / FTD / cdFMC)~$\bullet$~Network Automation \& CI/CD 
 \textbf{Project 5: Cross-Platform Migration Validation Framework -- FMC}
 \nopagebreak
 \resumeItemListStart
-  \resumeItem{Architected a \textbf{pyATS automation framework} validating end-to-end \textbf{FMC migration workflows} for \textbf{production firewall management appliances} across multiple topology modes (standalone, HA, dual-instance) and a range of source$\rightarrow$target hardware paths spanning VMware, AWS, GCP, and physical appliances.}
+  \resumeItem{Architected a \textbf{pyATS automation framework} validating end-to-end \textbf{FMC migration workflows} for \textbf{production firewall management appliances} across multiple topology modes (standalone, HA, dual-instance) and a range of source-to-target hardware paths spanning VMware, AWS, GCP, and physical appliances.}
   \resumeItem{Automated the \textbf{full migration lifecycle} -- source preparation, migration bundle creation and upload, compatibility checks, migration execution, and post-migration validation of configuration persistence, licensing state, and HA re-formation.}
   \resumeItem{Engineered extensive \textbf{negative-path and post-migration scenarios} stress-testing HA splits, version mismatches, in-flight critical operations, and rollback paths to guarantee safe failure handling.}
   \resumeItem{Built reusable base test classes that became a widely reused migration validation base layer, providing release-gate regression coverage across cross-platform upgrades.}

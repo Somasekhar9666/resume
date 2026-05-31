@@ -22,6 +22,7 @@
 \usepackage{fontawesome5}
 \usepackage{multicol}
 \usepackage{graphicx}
+\usepackage{needspace}
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
@@ -145,7 +146,7 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[topsep=2pt, partopsep=0pt, parsep=0pt, itemsep=1pt, leftmargin=0.15in]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 
@@ -180,12 +181,12 @@
 
 
 \section{Summary}
-Automation Engineer with \textbf{2.5+ years} of experience building \textbf{test and validation automation} for \textbf{Cisco Secure Firewall infrastructure} (FMC, FTD, cdFMC). Specialized in \textbf{HA validation, disaster recovery, backup/restore, diagnostic generation, and cross-platform migration} frameworks using \textbf{pyATS / pytest} and \textbf{REST/CLI} automation, integrated into \textbf{CI/CD} pipelines that have cut manual validation and recovery effort by up to \textbf{90\%}. Authored \textbf{a large portfolio of automated test scenarios} across on-prem, virtual, and cloud-hosted environments. Leverages \textbf{AI-assisted development workflows} (GitHub Copilot, Cursor, Windsurf) to accelerate framework delivery and debugging.
+Automation Engineer with \textbf{2.5+ years} of experience building \textbf{test and validation automation} for \textbf{Cisco Secure Firewall infrastructure} (FMC, FTD, cdFMC). Specialized in \textbf{HA validation, disaster recovery, backup/restore, troubleshoot bundle generation \& validation, and cross-platform migration} frameworks using \textbf{pyATS / pytest} and \textbf{REST/CLI} automation, integrated into \textbf{CI/CD} pipelines that have cut manual validation and recovery effort by up to \textbf{90\%}. Authored \textbf{500+ automated test cases} across on-prem, virtual, and cloud-hosted environments. Leverages \textbf{AI-assisted development workflows} (GitHub Copilot, Cursor, Windsurf) to accelerate framework delivery and debugging.
 
 %-----------CORE COMPETENCIES-----------
 \section{Core Competencies}
 \small
-Python / pyATS Test Framework Engineering~$\bullet$~REST API \& CLI Automation~$\bullet$~CI/CD Pipeline Ownership (Jenkins)~$\bullet$~Reusable Test SDK \& Fixture Design~$\bullet$~HA, Disaster Recovery \& Backup/Restore Validation~$\bullet$~Cross-Platform Migration Validation~$\bullet$~Cloud \& Multi-Platform Infrastructure (AWS / GCP / VMware)~$\bullet$~Parallel Execution, Logging \& Observability
+Test Automation Framework Design (Python, pyATS)~$\bullet$~REST API \& CLI Test Automation~$\bullet$~End-to-End Validation: HA, Disaster Recovery, Backup/Restore, Migration~$\bullet$~CI/CD Test Integration (Jenkins, Release-Gate Suites)~$\bullet$~Negative-Path, Regression \& Release-Readiness Testing~$\bullet$~AI-Assisted Test Development (GitHub Copilot, Cursor, Windsurf)~$\bullet$~Cross-Platform Test Execution (AWS / GCP / VMware / On-Prem)~$\bullet$~Test Reporting, Structured Logging \& Result Triage
 \vspace{4pt}
 
 
@@ -200,56 +201,58 @@ Python / pyATS Test Framework Engineering~$\bullet$~REST API \& CLI Automation~$
   {Cisco Systems}{Nov 2023 -- Present}
   {Automation Engineer}{Bangalore, KA, India} 
 
+\needspace{6\baselineskip}
 \textbf{Project 1: HA Validation Framework -- Distributed Active/Standby Platform}
 \nopagebreak
 \resumeItemListStart
-  \resumeItem{Engineered a \textbf{pyATS}-based validation framework automating a wide range of HA scenarios across multiple workflow categories -- HA formation, role-switch failover, HA break, sync/mirror control, failure recovery, and negative / degraded-condition paths.}
-  \resumeItem{Built a reusable \textbf{HA orchestration library} providing high-level primitives for HA formation, role-switch, HA break, sync pause/resume, polling, and HA-pair lifecycle -- used as a foundation across the broader HA testcase suite.}
-  \resumeItem{Integrated \textbf{CLI and REST API} probes for state monitoring, registration verification, and component reachability across the active/standby topology to ensure service continuity and policy enforcement after failover events.}
-  \resumeItem{Reduced CI/CD pipeline runtime from $\sim$6h to $\sim$5h per cycle through \textbf{parallelized execution} and \textbf{fixture reuse}, accelerating release-readiness signal.}
+  \resumeItem{Engineered a \textbf{pyATS} validation framework for FMC \textbf{High Availability} covering \textbf{35+ scenarios and 80+ test methods} -- HA formation, role-switch failover, HA break, sync/mirror control, failure recovery, and negative / degraded-condition paths.}
+  \resumeItem{Built a reusable \textbf{HA orchestration library} exposing high-level primitives (formation, role-switch, break, sync pause/resume, polling, HA-pair lifecycle) consumed by the broader HA testcase suite.}
+  \resumeItem{Layered \textbf{CLI and REST API} probes for state monitoring, registration verification, and component reachability validation after failover.}
+  \resumeItem{Parallelized execution and refactored fixtures, reducing CI/CD HA-suite runtime from $\sim$6h to $\sim$5h per release cycle.}
 \resumeItemListEnd
-\vspace{14pt}
+\vspace{8pt}
 
+\needspace{6\baselineskip}
 \textbf{Project 2: Disaster Recovery Automation -- Cloud-Hosted Platform}
 \nopagebreak
 \resumeItemListStart
-  \resumeItem{Engineered a \textbf{pre/post state-capture-and-replay DR framework} for a cloud-hosted platform -- automating snapshot lifecycle, recovery orchestration, and post-DR re-validation across distributed cloud infrastructure.}
-  \resumeItem{Captured and re-validated a broad set of \textbf{configuration and policy domains} (versioning, registered components, health, multiple policy types, and deployment history) to confirm full parity and continuity after recovery.}
-  \resumeItem{Owned the \textbf{disaster-recovery automation suite} within the release CI/CD process, producing repeatable, auditable recovery evidence per release train.}
-  \resumeItem{Improved DR validation efficiency by $\sim$\textbf{90\%} and reduced manual recovery effort by $\sim$\textbf{80\%} through CI/CD-integrated, repeatable recovery testing.}
+  \resumeItem{Built a \textbf{pre/post state-capture-and-replay DR framework} for a cloud-hosted platform, automating snapshot lifecycle, recovery orchestration, and post-DR re-validation across distributed cloud infrastructure.}
+  \resumeItem{Authored \textbf{160+ test methods} across four DR scripts -- pre-DR preparation, pre-DR snapshot capture, post-DR validation, and post-DR snapshot re-validation -- covering the full snapshot \& recovery lifecycle.}
+  \resumeItem{Captured and re-validated \textbf{14+ configuration and policy domains} -- SRU/LSP versions, registered components, device health, AC / file / identity / SSL-TLS / VPN policies, and deployment history -- to confirm full parity and continuity after recovery.}
+  \resumeItem{Operationalized the DR suite inside the release \textbf{CI/CD} pipeline, cutting DR validation effort by $\sim$\textbf{90\%} and manual recovery effort by $\sim$\textbf{80\%} per release.}
 \resumeItemListEnd
 \vspace{14pt}
 
+\needspace{7\baselineskip}
 \textbf{Project 3: Backup \& Restore Automation Framework -- Multi-Platform, Multi-Storage}
 \nopagebreak
 \resumeItemListStart
-  \resumeItem{Designed a \textbf{pyATS automation framework} covering backup and restore workflows across on-prem, cloud-hosted, and managed-device variants -- spanning multiple operational modes including standalone, HA, cluster, cross-device, and hardware-replacement recovery.}
-  \resumeItem{Integrated \textbf{multiple storage backends} (Local, \textbf{NFS}, \textbf{SFTP/SCP}, \textbf{Amazon S3}) with end-to-end auth, transfer validation, manifest-driven integrity checks, and post-restore reachability and consistency verification.}
-  \resumeItem{Delivered a dedicated \textbf{Amazon S3 backup/restore subsystem} enabling first-class cloud-storage support for on-prem appliance backups.}
-  \resumeItem{Built extensive \textbf{REST API test coverage} and scheduling-automation modules covering on-demand and cron-driven backup jobs across multi-component topologies.}
-  \resumeItem{Compressed what was multi-day manual backup/restore validation into unattended CI runs, materially reducing release-cycle effort across the platform stack.}
+  \resumeItem{Designed a \textbf{pyATS automation framework} spanning \textbf{100+ backup/restore scenarios and 270+ test methods} across on-prem, cloud-hosted, and managed-device variants.}
+  \resumeItem{Covered \textbf{five recovery modes} -- standalone, HA, cluster, cross-device, and hardware-replacement -- with end-to-end validation of backup integrity and post-restore reachability.}
+  \resumeItem{Integrated \textbf{multiple storage backends}: Local, \textbf{NFS}, \textbf{SFTP/SCP}, and \textbf{Amazon S3} -- with authentication, transfer validation, and manifest-driven integrity checks.}
+  \resumeItem{Built \textbf{REST API test coverage} for on-demand backup operations and the \textbf{Amazon S3 backup/restore} flow across multi-component topologies.}
+  \resumeItem{Authored scheduling-automation modules validating cron-driven backup jobs, compressing multi-day manual validation cycles into unattended CI runs.}
 \resumeItemListEnd
-\vspace{14pt}
+\vspace{6pt}
 
-\filbreak
-\textbf{Project 4: Diagnostic / Troubleshoot Bundle Automation Framework}
+\needspace{5\baselineskip}
+\textbf{Project 4: Troubleshoot Bundle Automation Framework}
 \nopagebreak
 \resumeItemListStart
-  \resumeItem{Built a \textbf{pyATS automation framework} for diagnostic bundle generation and validation across \textbf{multiple platform variants} -- standalone, HA, clustered, and management-tier topologies -- supporting both \textbf{API and CLI} extraction paths.}
-  \resumeItem{Validated bundle completeness across a broad set of component and runtime domains to ensure diagnostic artifacts contain the data required for production troubleshooting.}
-  \resumeItem{Authored shared utility libraries reusable across on-prem and cloud-hosted variants, standardizing diagnostic collection for support and operations workflows.}
-  \resumeItem{Engineered negative-path and degraded-condition scenarios to confirm graceful failure handling; integrated into \textbf{CI/CD} for continuous assurance of diagnostic-artifact consistency across release trains.}
+  \resumeItem{Developed a \textbf{pyATS framework} (\textbf{30+ test methods}) that triggers \textbf{troubleshoot bundle generation} via \textbf{REST API} or \textbf{CLI}, retrieves the bundle artifact, and validates its completeness across standalone, HA, clustered, and management-tier topologies.}
+  \resumeItem{Verified \textbf{6+ artifact categories} per bundle -- CLI command outputs, system logs, database dumps, file-integrity manifests, configuration extracts, and runtime state -- using shared utility libraries reusable across on-prem and cloud-hosted variants.}
+  \resumeItem{Engineered negative-path and degraded-condition scenarios for interrupted or incomplete bundle generation, integrated into \textbf{CI/CD} for continuous assurance of troubleshoot-artifact consistency across release trains.}
 \resumeItemListEnd
 \vspace{14pt}
 
-\filbreak
+\needspace{6\baselineskip}
 \textbf{Project 5: Cross-Platform Migration Validation Framework}
 \nopagebreak
 \resumeItemListStart
-  \resumeItem{Architected a \textbf{pyATS automation framework} validating end-to-end \textbf{migration workflows} across multiple topology modes (standalone, HA, dual-instance) and a range of source$\rightarrow$target paths spanning VMware, AWS, GCP, and physical appliances.}
-  \resumeItem{Automated the \textbf{full migration lifecycle} -- source preparation, bundle creation and upload, compatibility checks, migration execution, and post-migration validation of configuration persistence, licensing state, and HA re-formation.}
-  \resumeItem{Engineered extensive \textbf{negative-path and post-migration scenarios} stress-testing HA splits, version mismatches, in-flight critical operations, and rollback paths to guarantee safe failure handling.}
-  \resumeItem{Built reusable \textbf{base test classes} that became a widely reused migration validation base layer, providing release-gate regression coverage across cross-platform upgrades.}
+  \resumeItem{Designed and built a \textbf{pyATS migration validation framework} automating the full lifecycle -- source preparation, bundle upload, migration execution, and post-migration validation of configuration persistence, licensing state, and HA re-formation.}
+  \resumeItem{Validated cross-platform migration coverage across \textbf{standalone, HA, and dual-instance} topologies spanning \textbf{VMware, AWS, GCP, and physical appliances}.}
+  \resumeItem{Built reusable \textbf{base test classes} shared across \textbf{5 migration suites} (standalone, HA, upload, post-migration, negative-path) -- 30+ test cases, 90+ test methods -- providing release-gate regression coverage across cross-platform upgrades.}
+  \resumeItem{Engineered negative-path and post-migration scenarios stress-testing HA splits, version mismatches, in-flight critical operations, and rollback paths to validate safe failure handling.}
 \resumeItemListEnd
 
 \vspace{8pt}
@@ -266,12 +269,13 @@ Python / pyATS Test Framework Engineering~$\bullet$~REST API \& CLI Automation~$
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \item \textbf{Languages:} Python (primary), Java, SQL, Shell / Bash Scripting
-  \item \textbf{Test Frameworks:} pyATS, pytest, unittest, fixture design, parameterization, base test classes, mocking, test SDK design
-  \item \textbf{API \& Automation:} REST / JSON, requests, Postman, CLI device automation, polling \& retry patterns, OpenAPI
+  \item \textbf{Test Frameworks:} pyATS, pytest, unittest, fixture design, parameterization, base test classes, mocking
+  \item \textbf{API \& Automation:} REST / JSON, requests, Postman, CLI device automation, polling \& retry patterns
   \item \textbf{CI/CD:} Jenkins, pipeline-as-code, parallel execution, release gating, artifact management, logging \& monitoring
   \item \textbf{Cloud \& Infrastructure:} AWS (EC2, S3), GCP, VMware ESXi, Linux, on-prem / bare-metal appliances
-  \item \textbf{Storage Protocols:} Amazon S3, NFS, SMB, SSH / SFTP / SCP
-  \item \textbf{Reliability \& Validation:} HA failover testing, Disaster Recovery, Backup \& Restore, Migration validation, Negative-path testing, Regression \& Release-Gate suites, Observability, Runbooks
+  \item \textbf{Protocols:} HTTPS, REST over HTTPS, SSH, SFTP / SCP, TCP/IP
+  \item \textbf{Storage Backends:} Amazon S3, NFS
+  \item \textbf{Reliability \& Validation:} HA failover testing, Disaster Recovery, Backup \& Restore, Migration validation, Negative-path testing, Regression \& Release-Gate suites, structured logging
   \item \textbf{AI Tools:} GitHub Copilot, Cursor, Windsurf, MCP, LLM integration
   \item \textbf{Tools:} Git, Jira, Postman, Linux, VS Code, PyCharm
 \end{itemize}
